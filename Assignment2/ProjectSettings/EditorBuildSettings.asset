@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Week2/2.6. Strategy Pattern with ScriptableObjects.unity
+    guid: 66039042c5605ab49bbf4e0ec937a2f0
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 7ac9d7d47e917be47832f0276db83777
   m_configObjects: {}
