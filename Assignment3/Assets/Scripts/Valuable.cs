@@ -1,5 +1,8 @@
-/* 
- *
+/*
+ * (Conner Ogle)
+ * (Assignment3)
+ * (Assignment 3)
+ * (subjects being observed. They are objects the player is trying to find and the game updates based on finding them)
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +17,7 @@ namespace ObserverPatternAssignment
         public bool found;
         public int progress;
         public Vector3 valuablePosition;
+        public bool cube;
 
         //Allow me to access this script from attach Gameobject by adding this to inspector
         public ValuableData valuableData;

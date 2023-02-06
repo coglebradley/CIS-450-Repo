@@ -1,5 +1,8 @@
-/* Example Code for Game Programming Design Patterns
- * Author: Owen Schaffer
+/*
+ * (Conner Ogle)
+ * (Assignment3)
+ * (Assignment 3)
+ * (Observer to update text gui and display victory)
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -30,13 +33,30 @@ namespace ObserverPatternAssignment
         public void UpdateData(List<Valuable> valuables)
         {
             textToDisplay = "";
-            foreach (Valuable location in valuables)
+            foreach (Valuable valuable in valuables)
             {
-                textToDisplay += "Square: " + location.valuableName + ".\n";
-                textToDisplay += "Found: " + location.found.ToString() + ".\n";
+                if (valuable.cube == true)
+                {
+                    textToDisplay += "Cube: " + valuable.valuableName;
+                    textToDisplay += " Found: " + valuable.found.ToString() + "\n";
+                }
             }
-            textToDisplay += "Squares Left: " + (5 - PlayerInfo.objectsFound) + ".\n";
+            textToDisplay += "Squares Left: " + (5 - PlayerInfo.objectsFound) + "\n";
             gameObject.GetComponent<Text>().text = textToDisplay;
+        }
+
+        public void victory()
+        {
+            if (PlayerInfo.objectsFound == 5)
+            {
+                textToDisplay = "You have found all the cubes!! Victory is yours!" + "\n" + "(Press R to restart)" ;
+                gameObject.GetComponent<Text>().text = textToDisplay;
+            }
+            if (PlayerInfo.hidden == true)
+            {
+                textToDisplay = "YOU FOUND THE HIDDEN CAPSULE?!? YOU HAVE DOOMED US ALL!!!" + "\n" + "(Press R to restart)";
+                gameObject.GetComponent<Text>().text = textToDisplay;
+            }
         }
 
     }

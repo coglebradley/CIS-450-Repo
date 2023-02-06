@@ -1,18 +1,44 @@
+/*
+ * (Conner Ogle)
+ * (Assignment3)
+ * (Assignment 3)
+ * (game manager that restarts scene and manages basic gameplay)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+namespace ObserverPatternAssignment
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        
-    }
+        public Text text;
+        public ValuableData valuableData;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+
+        // Start is called before the first frame update
+        void Start()
+        {
+            PlayerInfo.hidden = false;
+            PlayerInfo.objectsFound = 0;
+            valuableData.NotifyObservers();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
+            if (PlayerInfo.objectsFound == 5 || PlayerInfo.hidden == true)
+            {
+                valuableData.VictoryObservers();
+            }
+
+        }
     }
 }

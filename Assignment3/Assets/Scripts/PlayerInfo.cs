@@ -1,5 +1,8 @@
-/* Example Code for Game Programming Design Patterns
- * Author: Owen Schaffer
+/*
+ * (Conner Ogle)
+ * (Assignment3)
+ * (Assignment 3)
+ * (Used for basic info on player progress)
  */
 using System.Collections;
 using System.Collections.Generic;

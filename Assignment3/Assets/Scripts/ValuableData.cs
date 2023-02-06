@@ -1,5 +1,8 @@
-/* Example Code for Game Programming Design Patterns
- * Author: Owen Schaffer
+/*
+ * (Conner Ogle)
+ * (Assignment3)
+ * (Assignment 3)
+ * (gameobject that holds functions that other classes will reference)
  */
 using System;
 using System.Collections;
@@ -16,11 +19,6 @@ namespace ObserverPatternAssignment
         private List<IObserver> observers = new List<IObserver>();
 
         public List<Valuable> valuables = new List<Valuable>();
-
-        internal void AddValuable(HiddenCapsule hiddenCapsule)
-        {
-            throw new NotImplementedException();
-        }
 
         public void RegisterObserver(IObserver observer)
         {
@@ -48,6 +46,15 @@ namespace ObserverPatternAssignment
                 //include data as parameters to UpdateData
                 observer.UpdateData(valuables);
                 Debug.Log("UpdateData was called from Notify Observers");
+            }
+        }
+
+        public void VictoryObservers()
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.victory();
+                Debug.Log("Victory has been achieved");
             }
         }
 
