@@ -16,7 +16,6 @@ namespace ObserverPatternAssignment
         public string valuableName;
         public bool found;
         public int progress;
-        public Vector3 valuablePosition;
         public bool cube;
 
         //Allow me to access this script from attach Gameobject by adding this to inspector
@@ -24,7 +23,6 @@ namespace ObserverPatternAssignment
 
         public void Start()
         {
-            valuablePosition = gameObject.transform.position;
             valuableData.AddValuable(this);
         }
 
