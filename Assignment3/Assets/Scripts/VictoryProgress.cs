@@ -12,7 +12,6 @@ using UnityEngine.UI;
 
 namespace ObserverPatternAssignment
 {
-    //Attach this class to a UI text object to display the text
     public class VictoryProgress : MonoBehaviour, IObserver
     {
         //Allow me to access this script from attach Gameobject by adding this to inspector
@@ -20,18 +19,18 @@ namespace ObserverPatternAssignment
         public GameObject cubey;
         public GameObject player;
 
-        //Do not create a reference like this for static classes
-        //public PlayerInfo playerInfo;
+
 
         private string textToDisplay;
 
         void Start()
         {
+            //registers this as an observer and get the text used
             textToDisplay = gameObject.GetComponent<Text>().text;
 
             valuableData.RegisterObserver(this);
         }
-
+        //sets the player cube to active after finding the in game object
         public void Progress(List<Valuable> valuables)
         {
             foreach (Valuable valuable in valuables)
@@ -49,6 +48,7 @@ namespace ObserverPatternAssignment
 
         }
 
+        //displays victory text
         public void victory()
         {
             if (PlayerInfo.objectsFound == 5)

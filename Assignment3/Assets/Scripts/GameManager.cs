@@ -17,7 +17,7 @@ namespace ObserverPatternAssignment
         public ValuableData valuableData;
 
 
-        // Start is called before the first frame update
+
         void Start()
         {
             PlayerInfo.hidden = false;
@@ -25,7 +25,7 @@ namespace ObserverPatternAssignment
             valuableData.NotifyObservers();
         }
 
-        // Update is called once per frame
+
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.R))

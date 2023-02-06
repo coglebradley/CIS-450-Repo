@@ -34,7 +34,6 @@ namespace ObserverPatternAssignment
 
             if (valuables != null)
             {
-                //Updates data for newly added observer
                 observer.Progress(valuables);
             }
         }
@@ -43,9 +42,9 @@ namespace ObserverPatternAssignment
         {
             foreach (IObserver observer in observers)
             {
-                //include data as parameters to UpdateData
+                //sends cube data to observer
                 observer.Progress(valuables);
-                Debug.Log("UpdateData was called from Notify Observers");
+
             }
         }
 
@@ -60,7 +59,7 @@ namespace ObserverPatternAssignment
 
         public void AddValuable(Valuable valuable)
         {
-            //adds valuables in scene
+            //cubes in scene are added to the list
             valuables.Add(valuable);
 
             NotifyObservers();

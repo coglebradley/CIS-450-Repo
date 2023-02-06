@@ -27,7 +27,7 @@ namespace ObserverPatternAssignment
             valuableData.AddValuable(this);
         }
 
-        //This is called when the Player enters the trigger this script is attached to
+        //A trigger to identify when player has found cube and updates this information to observer
         public void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player" && found == false)

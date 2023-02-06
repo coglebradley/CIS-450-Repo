@@ -10,9 +10,7 @@ using UnityEngine;
 
 namespace ObserverPatternAssignment
 {
-    //Adding this above a class declaration lets the class be visible in the inspector
-    //even though it does not extend MonoBehavior
-    //[System.Serializable]
+    //class used for some basic info on progress
     public static class PlayerInfo
     {
         public static int objectsFound;
