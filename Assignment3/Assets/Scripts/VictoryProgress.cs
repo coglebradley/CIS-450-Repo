@@ -17,6 +17,8 @@ namespace ObserverPatternAssignment
     {
         //Allow me to access this script from attach Gameobject by adding this to inspector
         public ValuableData valuableData;
+        public GameObject cubey;
+        public GameObject player;
 
         //Do not create a reference like this for static classes
         //public PlayerInfo playerInfo;
@@ -30,19 +32,21 @@ namespace ObserverPatternAssignment
             valuableData.RegisterObserver(this);
         }
 
-        public void UpdateData(List<Valuable> valuables)
+        public void Progress(List<Valuable> valuables)
         {
-            textToDisplay = "";
             foreach (Valuable valuable in valuables)
             {
+
                 if (valuable.cube == true)
                 {
-                    textToDisplay += "Cube: " + valuable.valuableName;
-                    textToDisplay += " Found: " + valuable.found.ToString() + "\n";
+                    if(valuable.found == true)
+                    {
+                        valuable.attachedCube.SetActive(true);
+                    }
+                    
                 }
             }
-            textToDisplay += "Squares Left: " + (5 - PlayerInfo.objectsFound) + "\n";
-            gameObject.GetComponent<Text>().text = textToDisplay;
+
         }
 
         public void victory()

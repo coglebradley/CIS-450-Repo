@@ -13,10 +13,11 @@ namespace ObserverPatternAssignment
     //Attach this class to GameObjects with colliders in the scene
     public class Valuable : MonoBehaviour
     {
-        public string valuableName;
+        public string valueColor;
         public bool found;
         public int progress;
         public bool cube;
+        public GameObject attachedCube;
 
         //Allow me to access this script from attach Gameobject by adding this to inspector
         public ValuableData valuableData;

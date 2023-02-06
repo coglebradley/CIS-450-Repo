@@ -12,7 +12,7 @@ namespace ObserverPatternAssignment
 {
     public interface IObserver
     {
-        void UpdateData(List<Valuable> valuables);
+        void Progress(List<Valuable> valuables);
 
         void victory();
 

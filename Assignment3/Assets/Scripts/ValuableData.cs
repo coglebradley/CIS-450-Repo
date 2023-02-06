@@ -20,6 +20,13 @@ namespace ObserverPatternAssignment
 
         public List<Valuable> valuables = new List<Valuable>();
 
+        public GameObject green;
+        public GameObject blue;
+        public GameObject red;
+        public GameObject yellow;
+        public GameObject orange;
+
+
         public void RegisterObserver(IObserver observer)
         {
             //Add observer to list of observers
@@ -28,23 +35,16 @@ namespace ObserverPatternAssignment
             if (valuables != null)
             {
                 //Updates data for newly added observer
-                observer.UpdateData(valuables);
+                observer.Progress(valuables);
             }
         }
 
-        public void RemoveObserver(IObserver observer)
-        {
-            if (observers.Contains(observer))
-            {
-                observers.Remove(observer);
-            }
-        }
         public void NotifyObservers()
         {
             foreach (IObserver observer in observers)
             {
                 //include data as parameters to UpdateData
-                observer.UpdateData(valuables);
+                observer.Progress(valuables);
                 Debug.Log("UpdateData was called from Notify Observers");
             }
         }

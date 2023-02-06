@@ -14,7 +14,6 @@ namespace ObserverPatternAssignment
 {
     public class GameManager : MonoBehaviour
     {
-        public Text text;
         public ValuableData valuableData;
 
 
