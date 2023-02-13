@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Assignment4
 {
@@ -12,12 +14,14 @@ namespace Assignment4
         private float spawnInterval = 3f;
         public bool gameOver;
         public BallMovement BallMoveScript;
+        public Text intro;
 
 
         // Start is called before the first frame update
         void Start()
         {
 
+            
 
             InvokeRepeating("Spawner", spawnDelay, spawnInterval);
 
@@ -32,7 +36,19 @@ namespace Assignment4
         // Update is called once per frame
         void Update()
         {
-
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            if (Input.GetKey(KeyCode.F))
+            {
+                intro.enabled = false;
+            }
+            if (BallMoveScript.score >= 75)
+            {
+                intro.enabled = true;
+                intro.text = "You have achieved Victory!";
+            }
         }
 
 

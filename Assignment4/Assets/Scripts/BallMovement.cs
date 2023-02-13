@@ -70,6 +70,16 @@ namespace Assignment4
                 collectable = new LowValue(collectable);
                 score += collectable.value;
             }
+            if (grabable.collectableType == Grabable.CollectableType.mid)
+            {
+                collectable = new LowValue(collectable);
+                score += collectable.value;
+            }
+            if (grabable.collectableType == Grabable.CollectableType.high)
+            {
+                collectable = new LowValue(collectable);
+                score += collectable.value;
+            }
         }
     }
 }

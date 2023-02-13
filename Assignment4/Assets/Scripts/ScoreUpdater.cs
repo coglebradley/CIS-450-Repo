@@ -12,7 +12,6 @@ namespace Assignment4
         void Start()
         {
 
-            textbox.text = "Score: 0";
 
             if(BallMoveScript == null)
             {

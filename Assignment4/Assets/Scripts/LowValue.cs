@@ -13,7 +13,7 @@ namespace Assignment4
 
     public class LowValue : ColorDecorator
     {
-        public new int value = 10;
+        public new int value = 5;
         Collectable collectable;
         public BallMovement BallMoveScript;
 

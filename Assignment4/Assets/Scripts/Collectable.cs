@@ -9,9 +9,10 @@ using UnityEngine;
 
 namespace Assignment4
 {
-    public class Collectable
+    public abstract class Collectable
     {
         public int value;
 
+        
     }
 }

@@ -7,5 +7,7 @@ namespace Assignment4
     public abstract class ColorDecorator : Collectable
     {
         public new int value;
+
+
     }
 }
