@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment5)
+ * (Assignment 5)
+ * (Script that allows player to throw discs and move camera)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +13,17 @@ namespace Assignment5
 {
     public class PlayerScript : MonoBehaviour
     {
-
+        public GameObject disc;
         public float CameraSpeed;
+        public DiscFactory factory;
+        public DiscSpawner spawner;
+        Rigidbody discRigid;
+        public float thrust = 1000f;
 
         // Start is called before the first frame update
         void Start()
         {
+            Vector3 discSpot = transform.position;
 
         }
 
@@ -28,18 +39,33 @@ namespace Assignment5
                 transform.position += Vector3.right * Time.deltaTime * CameraSpeed;
             }
 
-            if (Input.GetKey(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                return;
+                disc = spawner.SpawnDisc("Big");
+
+                discRigid = disc.GetComponent<Rigidbody>();
+
+                discRigid.AddForce(transform.forward*thrust, ForceMode.Impulse);
             }
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                return;
+                disc = spawner.SpawnDisc("Mid");
+
+                discRigid = disc.GetComponent<Rigidbody>();
+
+                discRigid.AddForce(transform.forward * thrust, ForceMode.Impulse);
             }
-            if (Input.GetKey(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                return;
+                disc = spawner.SpawnDisc("Small");
+
+                discRigid = disc.GetComponent<Rigidbody>();
+
+                discRigid.AddForce(transform.forward * thrust, ForceMode.Impulse);
             }
         }
+
+
+
     }
 }

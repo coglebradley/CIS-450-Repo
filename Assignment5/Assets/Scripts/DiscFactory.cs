@@ -1,28 +1,40 @@
+/*
+ * (Conner Ogle)
+ * (Assignment5)
+ * (Assignment 5)
+ * (The factory which will receive input and gather the desired prefab)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assignment5
 {
-    public class DiscFactory
+    public class DiscFactory : MonoBehaviour
     {
-        public Disc CreateDisc(string type)
+        public GameObject BigPrefab;
+        public GameObject MidPrefab;
+        public GameObject SmallPrefab;
+        private GameObject discSpawn;
+
+        public GameObject CreateDisc(string type)
         {
-            Disc disc = null;
+            discSpawn = null;
 
             if (type.Equals("Small"))
             {
-                disc = new DiscSmall();
+                discSpawn = SmallPrefab;
             }
             else if (type.Equals("Mid"))
             {
-                disc = new DiscMid();
+                discSpawn = MidPrefab;
             }
             else if (type.Equals("Big"))
             {
-                disc = new DiscBig();
+                discSpawn = BigPrefab;
             }
-            return disc;
+            return discSpawn;
+                        
         }
     }
 }
