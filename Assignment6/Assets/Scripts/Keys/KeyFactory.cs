@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Factory for keys)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +26,26 @@ namespace Assignment6
             if(type.Equals("BlueCylinder"))
             {
                 KeySpawn = BlueCylinderKey;
+            }
+            if (type.Equals("BlueCube"))
+            {
+                KeySpawn = BlueCubeKey;
+            }
+            if (type.Equals("BlueSphere"))
+            {
+                KeySpawn = BlueSphereKey;
+            }
+            if (type.Equals("RedCylinder"))
+            {
+                KeySpawn = RedCylinderKey;
+            }
+            if (type.Equals("RedCube"))
+            {
+                KeySpawn = RedCubeKey;
+            }
+            if (type.Equals("RedSphere"))
+            {
+                KeySpawn = RedSphereKey;
             }
 
             return KeySpawn;

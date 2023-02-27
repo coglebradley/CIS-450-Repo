@@ -1,18 +1,20 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Silver Artifact)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArtifactSilverCylinder : MonoBehaviour
+namespace Assignment6
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ArtifactSilverCylinder : Artifacts
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public ArtifactSilverCylinder()
+        {
+            this.ArtifactType = "SilverCylinder";
+        }
     }
 }

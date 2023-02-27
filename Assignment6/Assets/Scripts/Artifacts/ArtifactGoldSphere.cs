@@ -1,18 +1,20 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Gold Artifact)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArtifactGoldSphere : MonoBehaviour
+namespace Assignment6
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ArtifactGoldSphere : Artifacts
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public ArtifactGoldSphere()
+        {
+            this.ArtifactType = "GoldSphere";
+        }
     }
 }

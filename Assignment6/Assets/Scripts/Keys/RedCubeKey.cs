@@ -1,18 +1,20 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Red Key)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedCubeKey : MonoBehaviour
+namespace Assignment6
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RedCubeKey : Keys
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public RedCubeKey()
+        {
+            this.KeyType = "RedCube";
+        }
     }
 }

@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Gold Artifact Spawner)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,18 +1,20 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Red Key)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedSphereKey : MonoBehaviour
+namespace Assignment6
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RedSphereKey : Keys
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public RedSphereKey()
+        {
+            this.KeyType = "RedSphere";
+        }
     }
 }

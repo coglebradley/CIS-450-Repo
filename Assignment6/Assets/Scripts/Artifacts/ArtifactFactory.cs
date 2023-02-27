@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Artifact Factory)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +26,26 @@ namespace Assignment6
             if (type.Equals("GoldCylinder"))
             {
                 artifactSpawn = GoldCylinderArtifact;
+            }
+            if (type.Equals("GoldCube"))
+            {
+                artifactSpawn = GoldCubeArtifact;
+            }
+            if (type.Equals("GoldSphere"))
+            {
+                artifactSpawn = GoldSphereArtifact;
+            }
+            if (type.Equals("SilverCylinder"))
+            {
+                artifactSpawn = SilverCylinderArtifact;
+            }
+            if (type.Equals("SilverCube"))
+            {
+                artifactSpawn = SilverCubeArtifact;
+            }
+            if (type.Equals("SilverSphere"))
+            {
+                artifactSpawn = SilverSphereArtifact;
             }
 
             return artifactSpawn;

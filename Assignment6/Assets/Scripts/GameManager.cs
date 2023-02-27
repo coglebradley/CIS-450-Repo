@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment6)
+ * (Assignment 6)
+ * (Game Manager to keep track of artifacts found and text.)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,6 +33,11 @@ public class GameManager : MonoBehaviour
         {
             text.enabled = false;
 
+        }
+        if (ArtifactDropOffScript.artifactsFound == 6)
+        {
+            text.enabled = true;
+            text.text = "You win! Press R to play again!";
         }
     }
 }
