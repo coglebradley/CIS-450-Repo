@@ -26,7 +26,7 @@ namespace Assignment6
         {
             if (other.tag == "RedCube")
             {
-                artifact = spawner.SpawnKey("SilverCube", artifactSpot);
+                artifact = spawner.SpawnArtifact("SilverCube", artifactSpot);
                 Destroy(other);
                 Destroy(gameObject);
             }

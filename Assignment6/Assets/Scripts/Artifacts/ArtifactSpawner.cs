@@ -21,7 +21,7 @@ namespace Assignment6
         }
 
         // Update is called once per frame
-        public GameObject SpawnKey(string type, Vector3 artifactSpot)
+        public GameObject SpawnArtifact(string type, Vector3 artifactSpot)
         {
             artifact = factory.CreateArtifact(type);
 

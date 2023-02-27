@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2702,8 +2702,9 @@ MonoBehaviour:
     key slots and push the key to the key slot. These slots correspond to the color
     and shape and have transparency. When a key reaches a slot you will receive an
     artifact! To win collect all of the artifacts and bring them to the drop off
-    zone! The drop off zone is the green box located next to you. Press F to play
-    and R to restart! Goodluck!
+    zone! The drop off zone is the green box located next to you. Use WASD to move
+    and shift to run, this will help you move objects. Press F to play and R to restart!
+    Goodluck!
 --- !u!222 &666733963
 CanvasRenderer:
   m_ObjectHideFlags: 0
