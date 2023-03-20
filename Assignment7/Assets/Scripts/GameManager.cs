@@ -20,7 +20,7 @@ namespace Assignment7
         void Start()
         {
             solution = "stack";
-            text.text = "Welcome to Word Scramble! \nThe goal is to unscramble the word to create a real word. You can select a character based on its position using the keys 1-5. The left most character is position 1. Once you have a key selected use the left and right arrow keys to advance its position. You can undo a move by pressing E. When you think your word is done hit enter! \nPress F to play";
+            text.text = "Welcome to Word Scramble! \nThe goal is to unscramble the word to create a real word. You can select a character based on its position using the keys 1-5. The left most character is position 1. Once you have a key selected use the left and right arrow keys to advance its position. You can undo a move by pressing E. When you think your word is done hit enter! \nPress F to play and R to restart";
             KeyMoveLeft = new KeyMoveLeft(MoveKey);
             KeyMoveRight = new KeyMoveRight(MoveKey);
             commandHistory = new Stack<Command>();
