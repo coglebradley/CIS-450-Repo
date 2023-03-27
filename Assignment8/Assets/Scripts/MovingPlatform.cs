@@ -20,7 +20,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             gameObject.transform.position = new Vector3(x,y,z);
         }
 
-        public void OnColliderEnter(Collider other)
+        public void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Player")
             {

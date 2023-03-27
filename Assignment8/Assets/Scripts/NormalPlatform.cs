@@ -16,7 +16,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Debug.Log("Normal Platform");
         }
 
-        public void OnCollisionEnter(Collision other)
+        public void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Player")
             {
