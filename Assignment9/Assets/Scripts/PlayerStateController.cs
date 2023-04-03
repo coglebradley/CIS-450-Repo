@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment9)
+ * (Assignment 9)
+ * (Controls the players states based on inputs and triggers)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

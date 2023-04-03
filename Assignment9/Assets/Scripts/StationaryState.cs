@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment9)
+ * (Assignment 9)
+ * (State when the player is stationary)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

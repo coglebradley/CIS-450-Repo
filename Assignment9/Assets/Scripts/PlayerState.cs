@@ -1,3 +1,9 @@
+/*
+ * (Conner Ogle)
+ * (Assignment9)
+ * (Assignment 9)
+ * (Interface for the states)
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
